@@ -4,11 +4,11 @@ const scheme = require('./scheme');
 
 const Op = Sequelize.Op;
 
-const sequelize = new Sequelize(null, null, {
+const sequelize = new Sequelize('JobMeetings', 'someuser', null, {
   dialect: 'sqlite',
-  storage: 'db.sqlite3',
+  storage: 'db.sqlite',
 
-operatorsAliases: { $and: Op.and },
+  operatorsAliases: { $and: Op.and },
 
   logging: false
 });
