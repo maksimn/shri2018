@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 
 app.use('/', pagesRoutes)
-app.use('/graphgl', graphqlRoutes);
+app.use('/graphql', graphqlRoutes);
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.listen(3000, () => console.log('Express app listening on localhost:3000'));
