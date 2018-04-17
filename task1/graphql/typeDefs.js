@@ -4,18 +4,14 @@ scalar Date
 type User {
     id: ID!
     login: String!
-    homeFloor: Int
+    homeFloor: Int!
     avatarUrl: String!
 }
 
 input UserInput {
     login: String!
-    homeFloor: Int
-}
-
-type UserRoom {
-    id: ID!
-    title: String!
+    homeFloor: Int!
+    avatarUrl: String!
 }
 
 type Room {
@@ -36,8 +32,8 @@ type Event {
     title: String!
     dateStart: Date!
     dateEnd: Date!
-    users: [User]
-    room: Room
+    users: [User]!
+    room: Room!
 }
 
 input EventInput {

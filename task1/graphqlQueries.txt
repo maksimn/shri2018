@@ -1,0 +1,84 @@
+mutation CreateUser($user: UserInput!) {
+  createUser(input: $user) {
+    login,
+    id
+  }
+}
+
+{
+  "user": {
+    "login": "Abdulov",
+    "homeFloor": 4,
+    "avatarUrl": "http://lurkmore.so/images/thumb/3/3a/Abdul.jpg/180px-Abdul.jpg"
+  }
+}
+======================================
+mutation UpdateUser($id: ID!, $user: UserInput!) {
+  updateUser(id: $id, input: $user) {
+    login,
+    id
+  }
+}
+
+{
+  "id": "4",
+  "user": {
+    "login": "Alexander Abdulov",
+    "homeFloor": 4,
+    "avatarUrl": "http://lurkmore.so/images/thumb/3/3a/Abdul.jpg/180px-Abdul.jpg"
+  }
+}
+=======================================
+mutation RemoveUser($id: ID!) {
+  removeUser(id: $id) {
+    login,
+    id
+  }
+}
+
+{
+  "id": "4"
+}
+=======================================
+mutation CreateRoom($room: RoomInput!) {
+  createRoom(input: $room) {
+    title,
+    id
+  }
+}
+
+{
+  "room": {
+    "title": "Stanford",
+    "capacity": 25,
+    "floor": 4
+  }
+}
+=======================================
+mutation UpdateRoom($id: ID!, $room: RoomInput!) {
+  updateRoom(id: $id, input: $room) {
+    title,
+    id
+  }
+}
+
+{
+  "id": "6",
+  "room": {
+    "title": "Stanford",
+    "capacity": 15,
+    "floor": 4
+  }
+}
+========================================
+mutation RemoveRoom($id: ID!) {
+  removeRoom(id: $id) {
+    title,
+    id
+  }
+}
+
+{
+  "id": "6"
+}
+========================================

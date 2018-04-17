@@ -2,19 +2,19 @@ const Sequelize = require('sequelize');
 
 module.exports = function (sequelize) {
   const User = sequelize.define('User', {
-    login: Sequelize.STRING,
+    login: { type: Sequelize.STRING, unique: true },
     homeFloor: Sequelize.TINYINT,
     avatarUrl: Sequelize.STRING
   });
 
   const Room = sequelize.define('Room', {
-    title: Sequelize.STRING,
+    title: { type: Sequelize.STRING, unique: true },
     capacity: Sequelize.SMALLINT,
     floor: Sequelize.TINYINT
   });
 
   const Event = sequelize.define('Event', {
-    title: Sequelize.STRING,
+    title: { type: Sequelize.STRING, unique: true },
     dateStart: Sequelize.DATE,
     dateEnd: Sequelize.DATE
   });
