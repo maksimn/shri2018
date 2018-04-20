@@ -32,8 +32,8 @@ type Event {
     title: String!
     dateStart: Date!
     dateEnd: Date!
-    users: [User]!
-    room: Room!
+    users: [User]
+    room: Room
 }
 
 input EventInput {

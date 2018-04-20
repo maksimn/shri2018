@@ -2,7 +2,15 @@ const { models } = require('../../models');
 
 module.exports = {
   event (root, { id }) {
-    return models.Event.findById(id);
+    return models.Event.findById(id, {
+      include: [
+        { model: models.Room }
+      ]
+    }).then(event => {
+      event.dataValues.room = event.Room.dataValues;
+
+      return event.dataValues;
+    });
   },
   events (root, args, context) {
     return models.Event.findAll({}, context);
