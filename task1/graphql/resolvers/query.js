@@ -4,10 +4,12 @@ module.exports = {
   event (root, { id }) {
     return models.Event.findById(id, {
       include: [
-        { model: models.Room }
+        { model: models.Room },
+        { model: models.User }
       ]
     }).then(event => {
       event.dataValues.room = event.Room.dataValues;
+      event.dataValues.users = event.Users;
 
       return event.dataValues;
     });
