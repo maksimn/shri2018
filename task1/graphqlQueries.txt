@@ -82,3 +82,79 @@ mutation RemoveRoom($id: ID!) {
   "id": "6"
 }
 ========================================
+mutation CreateEvent($input: EventInput!, $userIds: [ID], $roomId: ID!) {
+  createEvent(input: $input, usersIds: $userIds, roomId: $roomId) {
+    id,
+    title,
+    users { id, login }
+    room { id, title }
+  }
+}
+
+{
+  "input": {
+    "title": "BEM 1",
+    "dateStart": "2018-04-20T18:47:21.077Z",
+    "dateEnd": "2018-04-20T19:47:21.077Z"
+  },
+  "userIds": ["2", "3"],
+  "roomId": "3"
+}
+=========================================
+mutation UpdateEvent($id: ID!, $input: EventInput!) {
+  updateEvent(id: $id, input: $input) {
+    id,
+    title
+  }
+}
+
+{
+  "input": {
+    "title": "BEM 1.23",
+    "dateStart": "2018-04-20T18:47:21.077Z",
+    "dateEnd": "2018-04-20T20:47:21.077Z"
+  },
+  "id": "4"
+}
+=========================================
+mutation RemoveUserFromEvent($id: ID!, $idUser: ID!) {
+  removeUserFromEvent(id: $id, userId: $idUser) {
+    id
+  }
+}
+
+{
+  "idUser": "2",
+  "id": "4"
+}
+=========================================
+mutation AddUserToEvent($id: ID!, $idUser: ID!) {
+  addUserToEvent(id: $id, userId: $idUser) {
+    id
+  }
+}
+
+{
+  "idUser": "3",
+  "id": "1"
+}
+=========================================
+mutation ChangeEventRoom($id: ID!, $roomID: ID!) {
+  changeEventRoom(id: $id, roomId: $roomID) {
+    id
+  }
+}
+{
+  "roomID": "2",
+  "id": "4"
+}
+=========================================
+mutation RemoveEvent($id: ID!) {
+  removeEvent(id: $id) {
+    id
+  }
+}
+
+{
+  "id": "4"
+}
