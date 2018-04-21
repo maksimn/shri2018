@@ -2,7 +2,7 @@
   "name": "shri-2018",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/index.js",
   "author": "",
   "license": "MIT",
   "engines": {
@@ -10,9 +10,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "semistandard",
-    "reset-db": "rm -f ./db.sqlite && node create-mock-data.js",
-    "dev": "nodemon index.js"
+    "lint": "echo \"Error: no lint specified\" && exit 1",
+    "reset-db": "rm -f ./db.sqlite && node ./src/create-mock-data.js",
+    "dev": "nodemon ./src/index.js"
   },
   "dependencies": {
     "express": "^4.15.4",
@@ -24,7 +24,6 @@
     "sqlite3": "^3.1.9"
   },
   "devDependencies": {
-    "nodemon": "^1.12.5",
-    "semistandard": "^11.0.0"
+    "nodemon": "^1.12.5"
   }
 }
