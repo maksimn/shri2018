@@ -17,9 +17,9 @@ const setEventDataValues = event => {
 module.exports = {
   event (root, { id }) {
     return models.Event.findById(id, eventFindOptions)
-        .then(setEventDataValues);
+      .then(setEventDataValues);
   },
-  events (root, args, context) {
+  events () {
     return models.Event.findAll(eventFindOptions).then(events => {
       return events.map(setEventDataValues);
     });
@@ -27,13 +27,13 @@ module.exports = {
   user (root, { id }) {
     return models.User.findById(id);
   },
-  users (root, args, context) {
+  users () {
     return models.User.findAll();
   },
   room (root, { id }) {
     return models.Room.findById(id);
   },
-  rooms (root, args, context) {
+  rooms () {
     return models.Room.findAll();
   }
 };

@@ -8,7 +8,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.use('/', pagesRoutes)
+app.use('/', pagesRoutes);
 app.use('/graphql', graphqlRoutes);
 
 app.listen(3000, () => console.log('Express app listening on localhost:3000'));

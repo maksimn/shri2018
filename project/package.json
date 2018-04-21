@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "echo \"Error: no lint specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint ./src/**/*.js",
     "reset-db": "rm -f ./db.sqlite && node ./src/create-mock-data.js",
     "dev": "nodemon ./src/index.js"
   },
@@ -24,6 +24,7 @@
     "sqlite3": "^3.1.9"
   },
   "devDependencies": {
+    "eslint": "^4.19.1",
     "nodemon": "^1.12.5"
   }
 }
