@@ -33,3 +33,7 @@ npm run reset-db
 2) `app.use('/graphgl', graphqlRoutes);` --> `app.use('/graphql', graphqlRoutes);` -- исправлена опечатка в маршруте.
 
 3) Исправлены queries и mutations.
+
+4) Для единого code style в проект добавлен `eslint` и заданы его правила.
+
+5) Изменена структура папок проекта -- весь код вынесен в папку `./src`.
