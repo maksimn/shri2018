@@ -1,3 +1,25 @@
 .create-meeting-room {
     float: right;
 }
+
+.meeting-room-list__header {
+    margin: 10px;
+}
+
+.meeting-room-list__floor {
+    font-weight: 700;
+    color: #777;
+    margin: 25px 5px 5px;
+}
+
+.meeting-room-list__room {
+    margin: 10px;
+}
+
+.meeting-room-list__room_busy {
+    color: #bbb;
+}
+
+.meeting-room-list__room-name {
+    font-weight: 700;
+}
