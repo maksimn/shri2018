@@ -77,7 +77,8 @@
 }
 
 .meeting-timetable-column:last-child {
-    width: calc(100vw - 1000px);
+    width: calc(100vw - 1018px);
+    border-right: none;
 }
 
 .meeting-room-list__room-timetable {
