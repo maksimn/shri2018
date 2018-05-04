@@ -1,0 +1,17 @@
+{
+    "name": "",
+    "version": "0.0.0",
+    "description": "",
+    "main": "",
+    "scripts": {
+        "lint": "./node_modules/.bin/stylelint meetingRooms.css",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {},
+    "devDependencies": {
+        "stylelint": "^9.2.0",
+        "stylelint-config-primer": "^2.2.5"
+    }
+}

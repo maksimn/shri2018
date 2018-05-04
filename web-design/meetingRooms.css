@@ -1,61 +1,10 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* Конец мейеровского reset.css */
-
 .page-header {
     height: 53px;
 }
 
 .page-header__title {
-    font-size: 24px;
     padding: 15px 0 0 20px;
+    font-size: 24px;
 }
 
 .page-header__create-meeting {
@@ -66,8 +15,8 @@ table {
 .meeting-room-list__header {
     height: 24px;
     padding: 10px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
 }
 
 .meeting-room-list__date {
@@ -81,21 +30,21 @@ table {
 }
 
 .meeting-room-list__hour-first {
-    padding: 0 14px 0 14px;
+    padding: 0 14px;
 }
 
 .meeting-room-list__floor {
+    padding-left: 20px;
+    margin: 25px 5px 12px;
     font-weight: 700;
     color: #777;
-    margin: 25px 5px 12px;
-    padding-left: 20px;
 }
 
 .meeting-room-list__room {
     display: inline-block;
+    width: 192px;
     padding-left: 20px;
     margin-bottom: 16px;
-    width: 192px;
 }
 
 .meeting-room-list__room_busy {
@@ -110,17 +59,17 @@ table {
     position: absolute;
     top: 98px;
     left: 215px;
-    min-height: calc(100vh - 98px);
-    border-left: 1px solid #aaa;
-    background-color: #e6ffff;
     z-index: -1;
+    min-height: calc(100vh - 98px);
+    background-color: #e6ffff;
+    border-left: 1px solid #aaa;
 }
 
 .meeting-timetable-column {
-    border-right: 1px solid #aaa;
     display: inline-block;
-    min-height: calc(100vh - 98px);
     width: 45px;
+    min-height: calc(100vh - 98px);
+    border-right: 1px solid #aaa;
 }
 
 .meeting-timetable-column:first-child {
@@ -139,7 +88,7 @@ table {
     border-bottom: 1px solid #aaa;
 }
 
-body {
+.page {
     font-family: Helvetica, Verdana, sans-serif;
-    font-size: .85em;
+    font-size: 0.85em;
 }

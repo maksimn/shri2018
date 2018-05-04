@@ -1,0 +1,11 @@
+{
+  "extends": "stylelint-config-primer",
+  "rules": {
+    "selector-no-qualifying-type": null,
+    "selector-class-pattern": null,
+    "property-no-vendor-prefix": null,
+    "declaration-property-value-blacklist": null,
+    "indentation": 4
+  },
+  "browser": "last 2 versions"
+}
