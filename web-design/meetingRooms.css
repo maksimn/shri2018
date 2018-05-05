@@ -1,5 +1,6 @@
 .page-header {
     height: 53px;
+    background-color: #fff;
 }
 
 .page-header__title {
@@ -15,6 +16,7 @@
 .meeting-room-list__header {
     height: 24px;
     padding: 10px;
+    background-color: #fff;
     border-top: 1px solid #000;
     border-bottom: 1px solid #000;
 }
@@ -29,7 +31,7 @@
     padding: 0 15px 0 16px;
 }
 
-.meeting-room-list__hour-first {
+.meeting-room-list__hour:nth-child(2) {
     padding: 0 14px;
 }
 
@@ -56,11 +58,11 @@
 }
 
 .meeting-timetable-grid {
-    position: absolute;
-    top: 98px;
+    position: fixed;
+    top: 0;
     left: 215px;
     z-index: -1;
-    min-height: calc(100vh - 98px);
+    height: 100vh;
     background-color: #e6ffff;
     border-left: 1px solid #aaa;
 }
@@ -68,7 +70,7 @@
 .meeting-timetable-column {
     display: inline-block;
     width: 45px;
-    min-height: calc(100vh - 98px);
+    height: 100vh;
     border-right: 1px solid #aaa;
 }
 
@@ -92,4 +94,8 @@
 .page {
     font-family: Helvetica, Verdana, sans-serif;
     font-size: 0.85em;
+}
+
+.meeting-room-list__room-wrapper:last-child {
+    margin-bottom: 30px;
 }
