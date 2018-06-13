@@ -1,26 +1,26 @@
-.meeting-room-list__floor {
+.rooms__floor {
     padding-left: 20px;
     margin: 25px 5px 12px;
     font-weight: 700;
     color: #777;
 }
 
-.meeting-room-list__room {
+.rooms__room {
     display: inline-block;
     width: 192px;
     padding-left: 20px;
     margin-bottom: 16px;
 }
 
-.meeting-room-list__room_busy {
+.rooms__room_busy {
     color: #bbb;
 }
 
-.meeting-room-list__room-name {
+.rooms__room-name {
     font-weight: 700;
 }
 
-.meeting-timetable-grid {
+.timeline-grid {
     position: fixed;
     top: 0;
     left: 215px;
@@ -30,23 +30,23 @@
     border-left: 1px solid #aaa;
 }
 
-.meeting-timetable-column {
+.timeline-vertical {
     display: inline-block;
     width: 45px;
     height: 100vh;
     border-right: 1px solid #aaa;
 }
 
-.meeting-timetable-column:first-child {
+.timeline-vertical:first-child {
     width: 33px;
 }
 
-.meeting-timetable-column:last-child {
+.timeline-vertical:last-child {
     width: calc(100vw - 1018px);
     border-right: none;
 }
 
-.meeting-room-list__room-timetable {
+.rooms__room-timetable {
     display: inline-block;
     min-width: calc(100vw - 233px);
     height: 25px;
@@ -54,6 +54,6 @@
     border-bottom: 1px solid #aaa;
 }
 
-.meeting-room-list__room-wrapper:last-child {
+.rooms__room-wrapper:last-child {
     margin-bottom: 30px;
 }
