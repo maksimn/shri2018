@@ -1,0 +1,14 @@
+.page-header {
+    height: 53px;
+    background-color: #fff;
+}
+
+.page-header__title {
+    padding: 15px 0 0 20px;
+    font-size: 24px;
+}
+
+.page-header__create-meeting {
+    float: right;
+    padding: 15px 30px 0 0;
+}

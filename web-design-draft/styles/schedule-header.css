@@ -1,0 +1,21 @@
+.meeting-room-list__header {
+    height: 24px;
+    padding: 10px;
+    background-color: #fff;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.meeting-room-list__date {
+    display: inline-block;
+    width: 210px;
+}
+
+.meeting-room-list__hour {
+    display: inline-block;
+    padding: 0 15px 0 16px;
+}
+
+.meeting-room-list__hour:nth-child(2) {
+    padding: 0 14px;
+}
